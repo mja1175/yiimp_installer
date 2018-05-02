@@ -1,12 +1,11 @@
 #!/bin/bash
 ################################################################################
 # Author:   crombiecrunch
-# 
-# Web:      www.thecryptopool.com
+# Mods  :   pav_hash
 #
 # Program:
 #   Install yiimp on Ubuntu 16.04 running Nginx, MariaDB, and php7.x
-# BTC Donation: 1HUruZMcSben39E27cyLwsTrk6bbWZs3po
+# BTC Donation: 3CsdpkawMuhSqBrdvCcHacSyuzmjzHVTTR
 # 
 ################################################################################
 output() {
