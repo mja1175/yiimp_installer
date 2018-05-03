@@ -555,6 +555,7 @@ define('"'"'EXCH_COINMARKETS_PIN'"'"', '"'"''"'"');
 define('"'"'EXCH_BITSTAMP_ID'"'"','"'"''"'"');
 define('"'"'EXCH_BITSTAMP_KEY'"'"','"'"''"'"');
 define('"'"'EXCH_HITBTC_KEY'"'"','"'"''"'"');
+
 define('"'"'EXCH_KRAKEN_KEY'"'"', '"'"''"'"');
 define('"'"'EXCH_LIVECOIN_KEY'"'"', '"'"''"'"');
 define('"'"'EXCH_NOVA_KEY'"'"', '"'"''"'"');
@@ -611,6 +612,11 @@ sudo chmod -R 777 /var/web/yaamp/runtime
 sudo chmod -R 777 /$HOME/backup/
 sudo chmod -R 777 /var/log
 sudo chmod -R 775 /var/web/serverconfig.php
+
+#add specific commands to sudoers file
+echo "$whoami   ALL=(ALL) NOPASSWD: /usr/sbin/service" | sudo tee --append /etc/sudoers
+echo "www-data  ALL=(ALL) NOPASSWD: /usr/sbin/service" | sudo tee --append /etc/sudoers
+
 sudo service nginx restart
 sudo service php7.0-fpm reload
 
