@@ -169,7 +169,7 @@ default         0;
     #Generating Random Password for stratum
     blckntifypass=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
     cd ~
-    git clone https://github.com/pav-hash/yiimp.git
+    git clone https://github.com/tpruvot/yiimp.git
     cd $HOME/yiimp/blocknotify
     sudo sed -i 's/tu8tu5/'$blckntifypass'/' blocknotify.cpp
     sudo make
@@ -519,9 +519,9 @@ define('"'"'YAAMP_DBNAME'"'"', '"'"'yiimpfrontend'"'"');
 define('"'"'YAAMP_DBUSER'"'"', '"'"'panel'"'"');
 define('"'"'YAAMP_DBPASSWORD'"'"', '"'"''"${password}"''"'"');
 define('"'"'YAAMP_PRODUCTION'"'"', true);
-define('"'"'YAAMP_RENTAL'"'"', true);
+define('"'"'YAAMP_RENTAL'"'"', false);
 define('"'"'YAAMP_LIMIT_ESTIMATE'"'"', false);
-define('"'"'YAAMP_FEES_MINING'"'"', 0.5);
+define('"'"'YAAMP_FEES_MINING'"'"', 1);
 define('"'"'YAAMP_FEES_EXCHANGE'"'"', 2);
 define('"'"'YAAMP_FEES_RENTING'"'"', 2);
 define('"'"'YAAMP_TXFEE_RENTING_WD'"'"', 0.002);
@@ -532,7 +532,7 @@ define('"'"'YIIMP_PUBLIC_EXPLORER'"'"', true);
 define('"'"'YIIMP_PUBLIC_BENCHMARK'"'"', false);
 define('"'"'YIIMP_FIAT_ALTERNATIVE'"'"', '"'"'USD'"'"'); // USD is main
 define('"'"'YAAMP_USE_NICEHASH_API'"'"', false);
-define('"'"'YAAMP_BTCADDRESS'"'"', '"'"'1HUruZMcSben39E27cyLwsTrk6bbWZs3po'"'"');
+define('"'"'YAAMP_BTCADDRESS'"'"', '"'"'1KZorGqGu7CLer9wEhCeyCRcPYoNE335Dp'"'"');
 define('"'"'YAAMP_SITE_URL'"'"', '"'"''"${server_name}"''"'"');
 define('"'"'YAAMP_STRATUM_URL'"'"', YAAMP_SITE_URL); // change if your stratum server is on a different host
 define('"'"'YAAMP_SITE_NAME'"'"', '"'"'TheCryptoPool'"'"');
@@ -540,7 +540,7 @@ define('"'"'YAAMP_ADMIN_EMAIL'"'"', '"'"''"${EMAIL}"''"'"');
 define('"'"'YAAMP_ADMIN_IP'"'"', '"'"''"${Public}"''"'"'); // samples: "80.236.118.26,90.234.221.11" or "10.0.0.1/8"
 define('"'"'YAAMP_ADMIN_WEBCONSOLE'"'"', true);
 define('"'"'YAAMP_NOTIFY_NEW_COINS'"'"', true);
-define('"'"'YAAMP_DEFAULT_ALGO'"'"', '"'"'x11'"'"');
+define('"'"'YAAMP_DEFAULT_ALGO'"'"', '"'"'x16r'"'"');
 define('"'"'YAAMP_USE_NGINX'"'"', true);
 // Exchange public keys (private keys are in a separate config file)
 define('"'"'EXCH_CRYPTOPIA_KEY'"'"', '"'"''"'"');
